@@ -19,7 +19,6 @@ add_library(
       "imgui.cpp"
       "imgui_demo.cpp"
       "imgui_draw.cpp"
-      "examples/libs/gl3w/GL/gl3w.c"
   )
 
 target_link_libraries(
