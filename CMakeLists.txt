@@ -13,6 +13,20 @@ set( IMGUI_INCLUDE_DIR
       CACHE STRING "dear imgui, include directory"
   )
 
+include_directories( ${IMGUI_INCLUDE_DIR} )
+
+### gl3w ######################################################################
+add_library(
+    gl3w
+      "examples/libs/gl3w/GL/gl3w.c"
+  )
+
+target_link_libraries(
+    gl3w
+    PUBLIC
+      GL
+  )
+
 ### imgui library #############################################################
 add_library(
     imgui
@@ -26,4 +40,5 @@ target_link_libraries(
     PUBLIC
       dl
       GL
+      gl3w
   )
