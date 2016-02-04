@@ -24,7 +24,7 @@ add_library(
 target_link_libraries(
     gl3w
     PUBLIC
-      GL
+      ${OPENGL_LIBRARY}
   )
 
 ### imgui library #############################################################
@@ -39,6 +39,6 @@ target_link_libraries(
     imgui
     PUBLIC
       dl
-      GL
+      ${OPENGL_LIBRARY}
       gl3w
   )
